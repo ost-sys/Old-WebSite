@@ -1,0 +1,139 @@
+:root {
+    /*Start
+    Color's get from Android 13 Material You*/
+    --back-color-all-1: #000;
+    --back-color-all-2: #fdfcff;
+    --back-color-all-0: #fff;
+    /*A1 Color Orange*/
+    --back-orange-color-a1-50: #2a1500;
+    --back-orange-color-a1-100: #492803;
+    --back-orange-color-a1-200: #683d0c;
+    --back-orange-color-a1-300: #83541c;
+    --back-orange-color-a1-400: #9f6a29;
+    --back-orange-color-a1-500: #bf8443;
+    --back-orange-color-a1-600: #dd9e5b;
+    --back-orange-color-a1-700: #fbb973;
+    --back-orange-color-a1-800: #fedcb7;
+    --back-orange-color-a1-900: #ffefde;
+    /*A2 Colors Orange*/
+    --back-orange-color-a2-50: #271703;
+    --back-orange-color-a2-100: #3e2d17;
+    --back-orange-color-a2-200: #58432a;
+    --back-orange-color-a2-300: #71593f;
+    --back-orange-color-a2-400: #8b7157;
+    --back-orange-color-a2-500: #a78c6f;
+    --back-orange-color-a2-600: #c3a689;
+    --back-orange-color-a2-700: #e1c1a3;
+    --back-orange-color-a2-800: #fedcbd;
+    --back-orange-color-a2-900: #ffefde;
+    /*A3 Colors Orange*/
+    --back-orange-color-a3-50: #151c00;
+    --back-orange-color-a3-100: #283313;
+    --back-orange-color-a3-200: #414b27;
+    --back-orange-color-a3-300: #56633a;
+    --back-orange-color-a3-400: #6c7b50;
+    --back-orange-color-a3-500: #889769;
+    --back-orange-color-a3-600: #a3b182;
+    --back-orange-color-a3-700: #bece9c;
+    --back-orange-color-a3-800: #dbe9b6;
+    --back-orange-color-a3-900: #e8f8c3;
+    /*N1 Colors Orange*/
+    --back-orange-color-n1-50: #1c1915;
+    --back-orange-color-n1-100: #332e29;
+    --back-orange-color-n1-200: #4b4741;
+    --back-orange-color-n1-300: #655d58;
+    --back-orange-color-n1-400: #7c756e;
+    --back-orange-color-n1-500: #978f89;
+    --back-orange-color-n1-600: #b2a9a3;
+    --back-orange-color-n1-700: #cec5bd;
+    --back-orange-color-n1-800: #ebe0d9;
+    --back-orange-color-n1-900: #f9efe7;
+    /*N2 Colors Orange*/
+    --back-orange-color-n2-50: #20170f;
+    --back-orange-color-n2-100: #372e24;
+    --back-orange-color-n2-200: #50453a;
+    --back-orange-color-n2-300: #695c51;
+    --back-orange-color-n2-400: #817366;
+    --back-orange-color-n2-500: #9e8d80;
+    --back-orange-color-n2-600: #b9a89c;
+    --back-orange-color-n2-700: #d5c4b5;
+    --back-orange-color-n2-800: #f2dfd0;
+    --back-orange-color-n2-900: #ffefde;
+    /*A1 Colors Blue*/
+    --back-blue-color-a1-50: #001c37;
+    --back-blue-color-a1-100: #00325a;
+    --back-blue-color-a1-200: #1c4975;
+    --back-blue-color-a1-300: #38608e;
+    --back-blue-color-a1-400: #5178a8;
+    --back-blue-color-a1-500: #6c93c4;
+    --back-blue-color-a1-600: #86aee0;
+    --back-blue-color-a1-700: #a2c9fd;
+    --back-blue-color-a1-800: #d2e4ff;
+    --back-blue-color-a1-900: #eaf1ff;
+    /*A2 Colors Blue*/
+    --back-blue-color-a2-50: #101c2b;
+    --back-blue-color-a2-100: #253141;
+    --back-blue-color-a2-200: #3c4858;
+    --back-blue-color-a2-300: #535f70;
+    --back-blue-color-a2-400: #6b7789;
+    --back-blue-color-a2-500: #8592a4;
+    --back-blue-color-a2-600: #a0acbf;
+    --back-blue-color-a2-700: #bbc7db;
+    --back-blue-color-a2-800: #d7e3f8;
+    --back-blue-color-a2-900: #eaf1ff;
+    /*A3 Colors Blue*/
+    --back-blue-color-a3-50: #251431;
+    --back-blue-color-a3-100: #3c2947;
+    --back-blue-color-a3-200: #533f5f;
+    --back-blue-color-a3-300: #6c5778;
+    --back-blue-color-a3-400: #846e90;
+    --back-blue-color-a3-500: #a088ac;
+    --back-blue-color-a3-600: #bba2c8;
+    --back-blue-color-a3-700: #d7bde4;
+    --back-blue-color-a3-800: #f4daff;
+    --back-blue-color-a3-900: #fbecff;
+    /*N1 Colors Blue*/
+    --back-blue-color-n1-50: #171c22;
+    --back-blue-color-n1-100: #2c3137;
+    --back-blue-color-n1-200: #43474e;
+    --back-blue-color-n1-300: #5a5f66;
+    --back-blue-color-n1-400: #72767e;
+    --back-blue-color-n1-500: #8d9199;
+    --back-blue-color-n1-600: #a7abb4;
+    --back-blue-color-n1-700: #c3c6cf;
+    --back-blue-color-n1-800: #dfe2eb;
+    --back-blue-color-n1-900: #edf1fa;
+    /*N2 Colors*/
+    --back-blue-color-n2-50: #1a1c1e;
+    --back-blue-color-n2-100: #2f3033;
+    --back-blue-color-n2-200: #45474a;
+    --back-blue-color-n2-300: #5d5e61;
+    --back-blue-color-n2-400: #757679;
+    --back-blue-color-n2-500: #757679;
+    --back-blue-color-n2-600: #909094;
+    --back-blue-color-n2-700: #ababae;
+    --back-blue-color-n2-800: #e3e2e6;
+    --back-blue-color-n2-900: #edf1fa;
+    /*RED*/
+    --back-red-a1-50: #3f0504;
+    --back-red-a1-100: #5a1b14;
+    --back-red-a1-200: #763229;
+    --back-red-a1-300: #94453f;
+    --back-red-a1-400: #b15f53;
+    --back-red-a1-500: #d1796d;
+    --back-red-a1-600: #f09384;
+    --back-red-a1-700: #ffb4a7;
+    --back-red-a1-800: #ffdad2;
+    --back-red-a1-900: #ffede9;
+    /*GREEN*/
+    --back-green-a1-50: #171c00;
+    --back-green-a1-100: #2c3206;
+    --back-green-a1-200: #434b11;
+    --back-green-a1-300: #5a6321;
+    --back-green-a1-400: #717b32;
+    --back-green-a1-500: #8c974c;
+    --back-green-a1-600: #a6b163;
+    --back-green-a1-700: #c2ce7c;
+    --back-green-a1-800: #dee995;
+    --back-green-a1-900: #edf9a4;
+}

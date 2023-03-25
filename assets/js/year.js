@@ -1,0 +1,1 @@
+document.write("Copyright © Windows Tester, 2022 - ", new Date().getFullYear(), '. Источник хостинга - <a href="https://www.github.com" class="link">Github</a>');
