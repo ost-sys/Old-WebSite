@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website of the owner of OST - OS Tester">
+    <meta name="description" content="Official website of the owner of OST - Operting System Tester">
     <link rel="shortcut icon" href="../assets/image/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="../assets/css/index.css">
@@ -15,114 +15,70 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Скопировано!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
     <title>Главная страница</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../index.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='../index.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Главная страница</div>
+        <div class="page-name" id="name">Главная страница</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Главная страница" class="material-symbols-rounded active">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
-                <li><a href="../md2_style/index.html" title="Material Design 2 (Android 9 - 11)" class="material-symbols-rounded">style<span class="navigation-list-name">MD2 (Бета)</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>Приветствую!</h1>
+        <h1 id="page-title">Приветствую!</h1>
         <h3>Добро пожаловать на мой веб-сайт! Здесь можно найти много интересного и полезного для ПК или телефона! Надеюсь ты найдёшь то, что тебе нужно!</h3>
-        <div class="separator"></div>
         <center>
             <iframe class="yt" width="620" height="348" src="https://www.youtube.com/embed/SlPl5-D-Zyo" title="Последнее видео" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </center>
-        <div class="separator"></div>
-        <div class="container">
-            <div class="pillars">
-                <div class="form-back-with-link" onclick="document.location='soft.html'">
-                    <div class="form-back-container">
-                        <h2>Софт</h2>
-                        <p>Хранит в себе Программы (Пока что для Windows и Android), Ключи актвации Windows, Модули Magisk, Темы, обои и т.д</p>
-                        <p>Загляни, вдруг найдёшь что-нибудь</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="soft.html"><button>Перейти в "Софт"</button></a>
-                    </div>
+        <div class="pillars">
+            <div class="container-with-link" onclick="document.location='soft.html'">
+                <div class="inactive-container">
+                    <h2>Утилиты</h2>
+                    <p>Хранит в себе Программы (Пока что для Windows и Android), Ключи актвации Windows, Модули Magisk, Темы, обои и т.д</p>
+                    <p>Загляни, вдруг найдёшь что-нибудь</p>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='about.html'">
-                    <div class="form-back-container">
-                        <h2>О проекте</h2>
-                        <p>Здесь хранится немного информации о создателе и о проекте!</p>
-                        <p>Если хочешь, можешь заглянуть</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="about.html"><button>Перейти в "О проекте"</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="soft.html"><button>Перейти в "Утилиты"</button></a>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='friends.html'">
-                    <div class="form-back-container">
-                        <h2>Друзья</h2>
-                        <p>Здесь ты можешь найти моих друзей!</p>
-                        <p>Может ты кого-то уже знаешь?</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="socials.html"><button>Перейти в "Друзья"</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='about.html'">
+                <div class="inactive-container">
+                    <h2>О проекте</h2>
+                    <p>Здесь хранится немного информации о создателе и о проекте!</p>
+                    <p>Если хочешь, можешь заглянуть</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="about.html"><button>Перейти в "О проекте"</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='friends.html'">
+                <div class="inactive-container">
+                    <h2>Друзья</h2>
+                    <p>Здесь ты можешь найти моих друзей!</p>
+                    <p>Может ты кого-то уже знаешь?</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="socials.html"><button>Перейти в "Друзья"</button></a>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
         <div class="friends">
-            <h3 style="font-size: 20px;">Мои друзья:</h3>
+            <h2>Мои друзья:</h2>
             <a href="https://nerok.ml">
                 <img src="../assets/image/nerok_banner.png" class="friends-link" alt="Nerok"/>
             </a>
@@ -141,24 +97,19 @@
             <h4 style="padding: 0px;">Хочешь быть здесь, пиши в ЛС <a href="https://t.me/Windows_Tester" class="link">Telegram</a></h4>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer_ru.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/WT.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

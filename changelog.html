@@ -14,50 +14,12 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Copied!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
     <title>Changelog</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="ru/changelog.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='ru/changelog.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Changelog</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Changelog</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
@@ -68,155 +30,178 @@
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Home page" class="material-symbols-rounded">home<span class="navigation-list-name">Home</span></a></li>
                 <li><a href="changelog.html" title="There are innovations here!" class="material-symbols-rounded active">edit_document<span class="navigation-list-name">Changelog</span></a></li>
-                <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">computer<span class="navigation-list-name">Soft</span></a></li>
-                <li><a href="about.html" title="About project" class="material-symbols-rounded">account_circle<span class="navigation-list-name">About</span></a></li>
+                <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
                 <li><a href="friends.html" title="My friends" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
+                <li><a href="about.html" title="About project" class="material-symbols-rounded">account_circle<span class="navigation-list-name">About</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="assets/js/nav.js"></script>
     <main>
-        <h1>Changelog</h1>
+        <h1 id="page-title">Changelog</h1>
         <center>
-            <div class="pillars-other" style="grid-template-columns: repeat(3, minmax(100px, 1fr))">
-                <div class="form-back" style="background-color: var(--back-orange-color-a3-700); color: var(--back-orange-color-a3-100);">Major update</div>
-                <div class="form-back">Default update</div>
-                <div class="form-back" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);">Patch update</div>
+            <div class="immutable-pillars">
+                <div class="container" style="background-color: var(--back-blue-color-a3-700); color: var(--back-blue-color-a3-100);">Major update</div>
+                <div class="container">Default update</div>
+                <div class="container" style="background-color: var(--back-blue-color-n1-700); color: var(--back-blue-color-n1-100);">Patch update</div>
             </div>
         </center>
         <div class="separator"></div>
-        <div class="container">
-            <h1>2023 year!</h1>
-            <div class="pillars-other">
-                <div class="form-back" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-n1-200);">Changed 3/28/2023</h2>
-                        <h4>1. Updated translation</h4>
-                        <h4>2. Fixing Known Issues</h4>
-                    </div>
-                </div>
-                <div class="form-back" style="background-color: var(--back-orange-color-a3-700); color: var(--back-orange-color-a3-100);">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-a3-200);">Changes 03/25/2023</h2>
-                        <h4>1. New colors!</h4>
-                        <h4>2. New section "Friends</h4>
-                        <h4>3. "Social networks" section moved to "About"</h4>
-                        <h4>4. Redesigned "Customization" section</h4>
-                        <h4>5. Removed images from quick buttons</h4>
-                        <h4>6. The "About" section now displays my devices</h4>
-                        <h4>7. New back button. Located in the lower left corner</h4>
-                        <h4>8. When scrolling the page, the navigation bar, the language change button and the back button are hidden</h4>
-                        <h4>9 The basement has been changed! Now it is divided into 2 parts: 1st with information, 2nd with a link to the site</h4>
-                        <h4>10: New program under "Programs (Windows)"</h4>
-                        <h4>11: There was a wave effect when pressing the button</h4>
-                        <h4>12: Getting rid of some animations to optimize the site</h4>
-                        <h4>13: Fix known issues!</h4>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Changes 02/15/2023</h2>
-                        <h4>1. Introducing "MD2 style"</h4>
-                        <h4>2. Redesign website</h4>
-                        <h4>3. Added separator</h4>
-                        <h4>4. Fixed bugs</h4>
-                        <h4>5. Now the sidebar takes up all the space when it is opened</h4>
-                        <h4>6. Changed more keys in the "Product Keys" section</h4>
-                    </div>
-                </div>
-                <div class="form-back" style="background-color: var(--back-orange-color-a3-700); color: var(--back-orange-color-a3-100);">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-a3-200);">Changes 22.01.2023</h2>
-                        <h4>1. Removed unnecessary effects and animations</h4>
-                        <h4>2. New section "Activation keys"</h4>
-                        <h4>3. Sections "Programs (Windows)", "Programs (Android)", "Magisk Modules", "Customization", "Activation Keys" have been merged! Now they are stored in the "Soft" section</h4>
-                        <h4>4. The footer now shows the current OS version</h4>
-                        <h4>5. "My friends" item is now displayed only on the main page</h4>
-                        <h4>6. The timer was translated before my birthday!</h4>
-                        <h4>7. The navigation bar has been changed in the mobile version</h4>
-                        <h4>8. In the "Socials" section, each item is marked with its own color (Depending on the color of the social!)</h4>
-                    </div>
+        <h1>2023 year!</h1>
+        <div class="pillars-other">
+            <div class="container" style="background-color: var(--back-blue-color-a3-700); color: var(--back-blue-color-a3-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-a3-200);">Changed 04/29/2023</h2>
+                    <ol>
+                        <li>Bring back blue tones</li>
+                        <li>Back button selected in navigation bar</li>
+                        <li>The software section has been renamed! Now it is named as "Utilities"</li>
+                        <li>New subsection under "Utilities" - "Programs for Linux distributions"</li>
+                        <li>The active page marks a bright color in the navigation bar</li>
+                        <li>When scrolling the navigation bar, the color will change and the page search text will appear</li>
+                        <li>Redesign in the Info section</li>
+                        <li>Small design and code improvements</li>
+                        <li>Changes in the section "Activation keys for Windows"</li>
+                    </ol>
                 </div>
             </div>
-            <h1>2022 year!</h1>
-            <div class="pillars-other">
-                <div class="form-back" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-n1-200);">The final change of 2022!</h2>
-                        <h4>1. Changed colors on click</h4>
-                        <h4>2. Changed the color in the "List of changes"! The Major Update now has RED colors</h4>
-                        <h4>3. There will be no more updates this year! Happy New Year! 🎁 May your dreams come true in 2023! The sky will be quiet, and you will be joyful!)</h4>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Changes 12/28/2022</h2>
-                        <h4>1. Welcome animation added</h4>
-                        <h4>2. Added text to the language change button</h4>
-                        <h4>3. The navigation bar has been moved down and to open it, you need to hover over the purple frame</h4>
-                        <h4>4. Section tiles added!</h4>
-                        <h4>5. Minor interface changes</h4>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Changes 12/26/2022</h2>
-                        <h4>1. Colors! I redid them a bit</h4>
-                        <h4>2. Updated navigation bar style</h4>
-                        <h4>3. Video banner background on the main page got an image</h4>
-                        <h4>4. There are sections on the main page</h4>
-                        <h4>5. Minor changes</h4>
-                        <h5>P.S. The code is already optimized, what should I change there?</h5>
-                    </div>
-                </div>
-                <div class="form-back" style="background-color: var(--back-orange-color-a3-700); color: var(--back-orange-color-a3-100);">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-a3-200);">Changes 12/24/2022</h2>
-                        <h4>1. Changed colors!</h4>
-                        <h4>2. Time and timer moved to the basement</h4>
-                        <h4>3. The section "About the project" has been redesigned</h4>
-                        <h4>4. Organized files</h4>
-                        <h4>5. Copy text button!</h4>
-                        <h4>6. Removed and changed some lines of code!</h4>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Changes 12/10/2022 - 12/9/2022</h2>
-                        <h4>1. English language support (Crutch, but it works!)</h4>
-                        <h4>2. Full translation into Russian</h4>
-                        <h4>3. The English version is launched by default</h4>
-                        <h4>4. Change language button</h4>
-                        <h4>5. Animation when hovering over an image</h4>
-                        <h4>6. Timer until the new year!</h4>
-                        <h4>7. Minor improvements in the code</h4>
-                        <h4>8. Animated elements, glows under the active zones - everything is done to prepare for the new year :D</h4>
-                    </div>
+            <div class="container" style="background-color: var(--back-blue-color-n1-700); color: var(--back-blue-color-n1-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-n1-200);">Changed 3/28/2023</h2>
+                    <ol>
+                        <li>Updated translation</li>
+                        <li>Fixing Known Issues</li>
+                    </ol>
                 </div>
             </div>
-            <span class="separator"></span>
-            <div style="text-align: center; font-size: 30px;">That's all for now!</div>
+            <div class="container" style="background-color: var(--back-blue-color-a3-700); color: var(--back-blue-color-a3-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-a3-200);">Changes 03/25/2023</h2>
+                    <ol>
+                        <li>1. New colors!</li>
+                        <li>2. New section "Friends</li>
+                        <li>3. "Social networks" section moved to "About"</li>
+                        <li>4. Redesigned "Customization" section</li>
+                        <li>5. Removed images from quick buttons</li>
+                        <li>6. The "About" section now displays my devices</li>
+                        <li>7. New back button. Located in the lower left corner</li>
+                        <li>8. When scrolling the page, the navigation bar, the language change button and the back button are hidden</li>
+                        <li>9. The basement has been changed! Now it is divided into 2 parts: 1st with information, 2nd with a link to the site</li>
+                        <li>10: New program under "Programs (Windows)"</li>
+                        <li>11: There was a wave effect when pressing the button</li>
+                        <li>12: Getting rid of some animations to optimize the site</li>
+                        <li>13: Fix known issues!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Changes 02/15/2023</h2>
+                    <ol>
+                        <li>Introducing "MD2 style"</li>
+                        <li>Redesign website</li>
+                        <li>Added separator</li>
+                        <li>Fixed bugs</li>
+                        <li>Now the sidebar takes up all the space when it is opened</li>
+                        <li>Changed more keys in the "Product Keys" section</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container" style="background-color: var(--back-blue-color-a3-700); color: var(--back-blue-color-a3-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-a3-200);">Changes 22.01.2023</h2>
+                    <ol>
+                        <li>Removed unnecessary effects and animations</li>
+                        <li>New section "Activation keys"</li>
+                        <li>Sections "Programs (Windows)", "Programs (Android)", "Magisk Modules", "Customization", "Activation Keys" have been merged! Now they are stored in the "Soft" section</li>
+                        <li>The footer now shows the current OS version</li>
+                        <li>"My friends" item is now displayed only on the main page</li>
+                        <li>The timer was translated before my birthday!</li>
+                        <li>The navigation bar has been changed in the mobile version</li>
+                        <li>In the "Socials" section, each item is marked with its own color (Depending on the color of the social!)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <h1>2022 year!</h1>
+        <div class="pillars-other">
+            <div class="container" style="background-color: var(--back-blue-color-n1-700); color: var(--back-blue-color-n1-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-n1-200);">The final change of 2022!</h2>
+                    <ol>
+                        <li>Changed colors on click</li>
+                        <li>Changed the color in the "List of changes"! The Major Update now has RED colors</li>
+                        <li>There will be no more updates this year! Happy New Year! 🎁 May your dreams come true in 2023! The sky will be quiet, and you will be joyful!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Changes 12/28/2022</h2>
+                    <ol>
+                        <li>Welcome animation added</li>
+                        <li>Added text to the language change button</li>
+                        <li>The navigation bar has been moved down and to open it, you need to hover over the purple frame</li>
+                        <li>Section tiles added!</li>
+                        <li>Minor interface changes</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Changes 12/26/2022</h2>
+                    <ol>
+                        <li>Colors! I redid them a bit</li>
+                        <li>Updated navigation bar style</li>
+                        <li>Video banner background on the main page got an image</li>
+                        <li>There are sections on the main page</li>
+                        <li>Minor changes</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container" style="background-color: var(--back-blue-color-a3-700); color: var(--back-blue-color-a3-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-blue-color-a3-200);">Changes 12/24/2022</h2>
+                    <ol>
+                        <li>Changed colors!</li>
+                        <li>Time and timer moved to the basement</li>
+                        <li>The section "About the project" has been redesigned</li>
+                        <li>Organized files</li>
+                        <li>Copy text button!</li>
+                        <li>Removed and changed some lines of code!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Changes 12/10/2022 - 12/9/2022</h2>
+                    <ol>
+                        <li>English language support (Crutch, but it works!)</li>
+                        <li>Full translation into Russian</li>
+                        <li>The English version is launched by default</li>
+                        <li>Change language button</li>
+                        <li>Animation when hovering over an image</li>
+                        <li>Timer until the new year!</li>
+                        <li>Minor improvements in the code</li>
+                        <li>Animated elements, glows under the active zones - everything is done to prepare for the new year :D</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="assets/js/year_en.js"></script><br><br>
-        Current time: <span id="clock" class="time"></span><br><br>
-        Time before my birthday: <span id="demo" class="time"></span><br><br>
-        <script src="assets/js/timer.js"></script>
-        <script src="assets/js/os_en.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Link to my website</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Copy text</button> 
-            <a href="assets/image/ost.png"><button class="button-footer">Download banner picture</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="assets/js/all_in_one.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Link to my website</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Copy text</button> 
+                <a href="assets/image/ost.png"><button class="button-footer">Download banner picture</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

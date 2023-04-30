@@ -14,78 +14,40 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Скопировано!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
     <title>Кастомизация</title>
 </head>
 <body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../themes.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+    <button class="switch" onclick="document.location='../themes.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Кастомизация</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button> Кастомизация</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
+            
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>Кастомизация</h1>
+        <h1 id="page-title">Кастомизация</h1>
         <h3>Тут будут хранится обои, темы и тому подобное!</h3>
-        <h3>Можете отправить свои обои в <a href="https://t.me/Windows_Tester" class="link">Telegram</a></h4>
+        <h3>Можете отправить свои обои в <a href="https://t.me/OS_Tester" class="link">Telegram</a></h4>
         <div class="pillars-other">
-            <div class="customization-container">
-                <div class="form-back-container">
+            <div class="container">
+                <div class="inactive-container">
                     <h2>Обои</h2>
                 </div>
-                <div class="form-back-container">
+                <div class="inactive-container">
                     <a href="https://drive.google.com/file/d/1HZ7AX7H3TnoIUvtMeanCGvhd4MXwcSXs/view?usp=share_link"><button class="customization-button">Обои Windows 10 (RTM - 1809)</button></a>
                     <a href="https://drive.google.com/file/d/1tzztWVx7D51kZ1z6Vfiz1HT8HJDXIA1H/view?usp=share_link"><button class="customization-button">Обои Windows 10 (1903 - 21H2)</button></a>
                     <a href="https://drive.google.com/drive/folders/1mzgyoU5G-sblbJdgX2wCFbYTAWnAHIZ5?usp=share_link"><button class="customization-button">Обои с моего ПК</button></a>
@@ -93,8 +55,8 @@
                     <a href="https://drive.google.com/drive/folders/1vitSsgdweN7PLGdPx3R0Eae0MYtUIkJd?usp=share_link"><button class="customization-button">Обои Google Pixel</button></a>
                 </div>
             </div>
-            <div class="customization-container">
-                <div class="form-back-container">
+            <div class="container">
+                <div class="inactive-container">
                     <h2>Музыка</h2>
                 </div>
                 <div class="form-back-container">
@@ -103,59 +65,60 @@
                     <a href="https://drive.google.com/file/d/172sTQNLf2gyTdDdQZOgIPdUNnIOdr8UZ/view?usp=share_link"><button class="customization-button">Over The Horizon (Все версии)</button></a>
                 </div>
             </div>
-            <div class="customization-container">
-                <div class="form-back-container">
+            <div class="container">
+                <div class="inactive-container">
                     <h2>Системные звуки</h2>
                 </div>
-                <div class="form-back-container">
+                <div class="finactive-container">
                     <a href="https://drive.google.com/file/d/1XzKQEx84ubZ4Op2C9N7Ol2q77VzabXDZ/view?usp=share_link"><button class="customization-button">Звуки Windows 11</button></a>
                     <a href="https://drive.google.com/file/d/1jKyzry4OMfwJNlXZ8lb5VYQo4nA3uiK-/view?usp=share_link"><button class="customization-button">Звуки Windows 10</button></a>
                     <a href="https://drive.google.com/file/d/10EMtzYi3zrZqQEyKEO4RTdOkzblcOraU/view?usp=share_link"><button class="customization-button">Galaxy A53</button></a>
                 </div>
             </div>
-            <div class="customization-container">
-                <div class="form-back-container">
+            <div class="container">
+                <div class="inactive-container">
                     <h2>Курсоры</h2>
                 </div>
-                <div class="form-back-container">
+                <div class="inactive-container">
                     <a href="https://drive.google.com/file/d/1MPqtyX2Yv-DPDoBMBiG_PFfl2m5_Sm1d/view?usp=share_link"><button class="customization-button">Windows 11 cursor concept V2</button></a>
                 </div>
             </div>
         </div>
-        <div class="separator"></div>
-        <div class="container">
-            <h2>Программы для кастомизации</h2>
-            <div class="pillars-other">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Ultra UX Theme Patcher</h2>
-                        <h4>Программа, редактирующая системные файлы для корректной работы сторонних тем.</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://mhoefs.eu/software_uxtheme.php?ref=syssel&lang=en"><button>Скачать с официального сайта</button></a>
-                    </div>
+        <h1>Программы для кастомизации</h1>
+        <div class="pillars-other">
+            <div class="container">
+                <div class="form-back-container">
+                    <h2>Ultra UX Theme Patcher</h2>
+                    <h4>Программа, редактирующая системные файлы для корректной работы сторонних тем</h4>
+                </div>
+                <div class="form-back-container">
+                    <a href="https://mhoefs.eu/software_uxtheme.php?ref=syssel&lang=en"><button>Скачать</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>ShareX</h2>
+                    <h4>Бесплатная программа для скриншотов и скринкастов с открытым исходным кодом для Microsoft Windows</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://getsharex.com/"><button>Скачать</button></a>
                 </div>
             </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer_ru.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/WT.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

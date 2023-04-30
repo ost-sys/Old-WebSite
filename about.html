@@ -14,50 +14,12 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Copied!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
-    <title>About project</title>
+    <title>Information</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="ru/about.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='ru/about.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">About project</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Information</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
@@ -68,150 +30,376 @@
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Home page" class="material-symbols-rounded">home<span class="navigation-list-name">Home</span></a></li>
                 <li><a href="changelog.html" title="There are innovations here!" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Changelog</span></a></li>
-                <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">computer<span class="navigation-list-name">Soft</span></a></li>
-                <li><a href="about.html" title="About project" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">About</span></a></li>
+                <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
                 <li><a href="friends.html" title="My friends" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
+                <li><a href="about.html" title="About project" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">About</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="assets/js/nav.js"></script>
     <main>
-        <h1>About the project and creator:</h1>
-        <div class="container">
-            <div class="pillars">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>About the creator</h2>
-                        <p>Name: Gadji (Unreadable in English)</p>
-                        <p>Age: 15 years old</p>
-                        <p>Nickname: OST - OS Tester (Windows Tester)</p>
-                        <p>The site was made in Visual Studio Code</p>
-                        <p>Helped me: <a href="https://nerok-web.github.io" class="link">Nerok</a> & <a href="https://mayplanet.ml" class="link">Maydilsiel</a></p>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>My PC</h2>
-                        <p>CPU: Intel Core 2 QUAD (2.40 GHz)</p>
-                        <p>GPU: NVIDIA GeForce 9500 GT (1 GB)</p>
-                        <p>RAM: 4 GB DDR3</p>
-                        <p>Motherboard: G41MT-S2PT</p>
-                        <p>OS: Windows 11 (ReviOS)</p>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Test Tools</h2>
-                        <p>Virtual machine: VMware Workstation 12</p>
-                        <p>Video editing software: Wondershare Filmora 11</p>
-                        <p>Video recording software: Bandicam</p>
-                    </div>
+        <h1 id="page-title">Information</h1>
+        <div class="pillars">
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Basic information</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Name</td><td class="table-form-right-top">Gadji (Unreadable in English)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Age</td><td class="table-form">15 years old</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Nickname</td><td class="table-form">OST - Operating System Tester</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Location</td><td class="table-form">Russia, Dagestan</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Birthday</td><td class="table-form">September 16, 2007</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Timezone</td><td class="table-form-right-bottom">UTC+3 (Moscow)</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <h1>My devices:</h1>
-            <div class="pillars-other">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Galaxy A53 5G (SM-A536E)</h2>
-                        <h4>CPU: Exynos 1280 (2400 MHz)</h4>
-                        <h4>GPU: Mali-G68</h4>
-                        <h4>Display: 1080 * 2400 (6,46 inches) - 120 Hz</h4>
-                        <h4>Storage: 256 GB </h4>
-                        <h4>RAM: 8 GB LPDDR4X</h4>
-                        <h4>Battery: 5000 mAh</h4>
-                        <h4>Status: <span style="color: var(--back-green-a1-100)">Official</span></h4>
-                    </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>My computer</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">CPU</td><td class="table-form-right-top">Intel Core 2 QUAD (2.40 GHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">GPU</td><td class="table-form">NVIDIA GeForce 9500 GT (1 GB)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">RAM</td><td class="table-form">4 GB DDR3</td>
+                            <tr>
+                                <th rowspan="2" class="table-form">Storage</th>
+                                <td class="table-form">HDD 160 GB (System)</td>
+                            </tr>
+                            <tr>
+                                <td class="table-form">HDD 1 GB</td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Motherboard</td><td class="table-form-right-bottom">G41MT-S2PT</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Redmi Note 5 (whyred)</h2>
-                        <h4>CPU: Qualcomm Snapdragon 636 (1800 MHz)</h4>
-                        <h4>GPU: Adreno 509</h4>
-                        <h4>Display: 1080 * 2160 (5.49 inches) - 60 Hz</h4>
-                        <h4>Storage: 64 GB</h4>
-                        <h4>RAM: 4 GB LPDDR4X</h4>
-                        <h4>Battery: 4000 mAh</h4>
-                        <h4>Status:  <span style="color: var(--back-red-a1-100)">Custom</span></h4>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Test equipment</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Virtual machine</td><td class="table-form-right-top">VMware Workstation 12</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Video editor</td><td class="table-form">Wondershare Filmora 11</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Screen recording</td><td class="table-form">Bandicam</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Preview</td><td class="table-form-right-bottom">Paint.net</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Galaxy J2 2018 (SM-J250F)</h2>
-                        <h4>CPU: Qualcomm Snapdragon 425 (1400 MHz)</h4>
-                        <h4>GPU: Adreno 308</h4>
-                        <h4>Display: 960 * 540 (5 inches) - 60 Hz</h4>
-                        <h4>Storage: 16 GB</h4>
-                        <h4>RAM: 1.5 GB</h4>
-                        <h4>Battery: 2600 mAh</h4>
-                        <h4>Status: <span style="color: var(--back-red-a1-100)">Custom</span></h4>
-                    </div>
+            </div>
+        </div>
+        <h1>My devices</h1>
+        <center>
+            <div class="immutable-pillars">
+                <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">Main device</div>
+                <div class="container">In stock</div>
+                <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">Out of stock</div>
+            </div>
+        </center>
+        <div class="separator"></div>
+        <div class="pillars-other">
+            <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">
+                <div class="inactive-container">
+                    <h2  style="color: var(--back-green-a1-200);">Galaxy A53 5G (SM-A536E)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top" style="background-color: var(--back-green-a1-800);">CPU</td><td class="table-form-right-top" style="background-color: var(--back-green-a1-800);">Exynos 1280 (2400 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">GPU</td><td class="table-form" style="background-color: var(--back-green-a1-800);">Mali-G68</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Display</td><td class="table-form" style="background-color: var(--back-green-a1-800);">1080 * 2400 (6,46 inches) - 120 Hz</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Storage</td><td class="table-form" style="background-color: var(--back-green-a1-800);">256 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">RAM</td><td class="table-form" style="background-color: var(--back-green-a1-800);">8 GB LPDDR4X</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Battery</td><td class="table-form" style="background-color: var(--back-green-a1-800);">5000 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form" style="background-color: var(--back-green-a1-800);">Camera
+                                <td class="table-form" style="background-color: var(--back-green-a1-800);">Back: 64 MP + 12 MP + 5 MP + 5 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Front: 32 MP</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">UI</td><td class="table-form" style="background-color: var(--back-green-a1-800);">One UI 5.1 (Android 13)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom" style="background-color: var(--back-green-a1-800);">Status</td><td class="table-form-right-bottom" style="background-color: var(--back-green-a1-800);"><span style="color: var(--back-red-a1-50)">Unofficial</span></td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Nokia 5530 XpressMusic</h2>
-                        <h4>CPU: Freescale MXC300-30 (1 MHz)</h4>
-                        <h4>GPU: Not Found...</h4>
-                        <h4>Display: 640 * 360 (2.9 inches)</h4>
-                        <h4>Storage: 256 MB</h4>
-                        <h4>RAM: 128 MB</h4>
-                        <h4>Battery: 1000 mAh</h4>
-                        <h4>Status: <span style="color: var(--back-green-a1-100)">Official</span></h4>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Redmi Note 5 (whyred)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">CPU</td><td class="table-form-right-top">Snapdragon 636 (1800 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">GPU</td><td class="table-form">Adreno 509</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Display</td><td class="table-form">1080 * 2160 (5.49 inches) - 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Storage</td><td class="table-form">64 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">RAM</td><td class="table-form">4 GB LPDDR4X</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Battery</td><td class="table-form">4000 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Camera
+                                <td class="table-form">Back: 12 MP + 5 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Front: 13 MP</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">UI</td><td class="table-form">Pixel Experience (Android 13)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-red-a1-100)">Unofficial</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-red-a1-200);">Galaxy J2 2018 (SM-J250F)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top" style="background-color: var(--back-red-a1-800);">CPU</td><td class="table-form-right-top" style="background-color: var(--back-red-a1-800);">Snapdragon 425 (1400 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">GPU</td><td class="table-form" style="background-color: var(--back-red-a1-800);">Adreno 308</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Display</td><td class="table-form" style="background-color: var(--back-red-a1-800);">960 * 540 (5 inches) - 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Storage</td><td class="table-form" style="background-color: var(--back-red-a1-800);">16 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">RAM</td><td class="table-form" style="background-color: var(--back-red-a1-800);">1.5 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Battery</td><td class="table-form" style="background-color: var(--back-red-a1-800);">2600 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form" style="background-color: var(--back-red-a1-800);">Camera
+                                <td class="table-form" style="background-color: var(--back-red-a1-800);">Back: 8 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Front: 5 MP</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">UI</td><td class="table-form" style="background-color: var(--back-red-a1-800);">SE 8.5 (Android 7)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom" style="background-color: var(--back-red-a1-800);">Status</td><td class="table-form-right-bottom" style="background-color: var(--back-red-a1-800);"><span style="color: var(--back-red-a1-50)">Unofficial</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Nokia 5530 XpressMusic</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">CPU</td><td class="table-form-right-top">Freescale MXC300-30 (1 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">GPU</td><td class="table-form">Didn't find any information...</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Display</td><td class="table-form">640 * 360 (2.9 inches)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Storage</td><td class="table-form">256 MB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">RAM</td><td class="table-form">128 MB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Battery</td><td class="table-form">1000 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Camera
+                                <td class="table-form">Back: 3.2 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Front: Not in this model</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">UI</td><td class="table-form">S60 Touch 5.0</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Galaxy Ace (GT-S5830i)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">CPU</td><td class="table-form-right-top">MSM7227T (800 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">GPU</td><td class="table-form">Adreno 200</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Display</td><td class="table-form">320 * 480 (3.5 inches)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Storage</td><td class="table-form">512 MB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">RAM</td><td class="table-form">278 MB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Battery</td><td class="table-form">1350 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Camera
+                                <td class="table-form">Back: 5 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Front: Not in this model</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">UI</td><td class="table-form">Android 2.3.6</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Galaxy Tab 10.1 (GT-P7510)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">CPU</td><td class="table-form-right-top">NVIDIA Tegra 2 T20 (1000 MHz)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">GPU</td><td class="table-form">NVIDIA ULP GeForce GPU</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Display</td><td class="table-form">800 * 1200 (10.1 inches)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Storage</td><td class="table-form">16 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">RAM</td><td class="table-form">1 GB</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Battery</td><td class="table-form">7000 mAh</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Camera
+                                <td class="table-form">Back: 3.2 MP</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Front: 2 MP</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">UI</td><td class="table-form">Android 4</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
-        <div class="container">
-            <div class="pillars" style="padding: 0;">
-                <div class="form-back-with-link" onclick="document.location='https://t.me/wt_news5566'">
-                    <div class="form-back-container">
-                        <h2><i class="fa fa-telegram"></i> Telegram</h2>
-                        <h4>The main news source for YouTube channel news, website updates, and more.</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://t.me/wt_news5566"><button>Join</button></a>
-                    </div>
+        <div class="pillars" style="padding: 0;">
+            <div class="container-with-link" onclick="document.location='https://t.me/wt_news5566'">
+                <div class="inactive-container">
+                    <h2><i class="fa fa-telegram"></i> Telegram</h2>
+                    <h4>The main news source for YouTube channel news, website updates, and more.</h4>
                 </div>
-                <div class="form-back-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
-                        <h4>Source for posting new videos! Subscribe :D</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Subscribe</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://t.me/ost_news5566"><button>Join</button></a>
                 </div>
-                <div class="form-back-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-50);" onclick="document.location='https://github.com/wt-sys'">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
-                        <h4>Source hosting my site! (Yes, my site is open source, you can check it out for yourself!)</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/ost-sys"><button class="github-button">Check it</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
+                    <h4>Source for posting new videos! Subscribe :D</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Subscribe</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);" onclick="document.location='https://github.com/wt-sys'">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
+                    <h4>Source hosting my site! (Yes, my site is open source, you can check it out for yourself!)</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/ost-sys"><button class="github-button">Check it</button></a>
                 </div>
             </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="assets/js/year_en.js"></script><br><br>
-        Current time: <span id="clock" class="time"></span><br><br>
-        Time before my birthday: <span id="demo" class="time"></span><br><br>
-        <script src="assets/js/timer.js"></script>
-        <script src="assets/js/os_en.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Link to my website</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Copy text</button> 
-            <a href="assets/image/ost.png"><button class="button-footer">Download banner picture</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="assets/js/all_in_one.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Link to my website</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Copy text</button> 
+                <a href="assets/image/ost.png"><button class="button-footer">Download banner picture</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

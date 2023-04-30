@@ -14,50 +14,12 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Скопировано!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
-    <title>Софт</title>
+    <title>Утилиты</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../soft.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='../soft.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Софт</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button> Утилиты</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
@@ -68,90 +30,92 @@
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Гланая страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>Софт</h1>
+        <h1 id="page-title">Утилиты</h1>
         <h3>Выберите под-раздел который вас интересует!</h3>
-        <div class="container">
-            <div class="pillars">
-                <div class="form-back-with-link" onclick="document.location='soft-windows.html'">
-                    <div class="form-back-container">
-                        <h2>Программы (Windows)</h2>
-                        <p>Хранит в себе Программы для Windows</p>
-                        <p>Программы не содержат в себе вирусов! Источники официальные!</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="soft-windows.html"><button style="width: 100%">Открыть</button></a>
-                    </div>
+        <div class="pillars">
+            <div class="container-with-link" onclick="document.location='soft-windows.html'">
+                <div class="inactive-container">
+                    <h2>Программы для Windows</h2>
+                    <p>Хранит в себе Программы для Windows</p>
+                    <p>Программы не содержат в себе вирусов! Источники официальные!</p>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='android.html'">
-                    <div class="form-back-container">
-                        <h2>Программы (Android)</h2>
-                        <p>Хранит в себе Программы для Android</p>
-                        <p>Программы не содержат в себе вирусов! Источники официальные!</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="android.html"><button style="width: 100%">Открыть</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="soft-windows.html"><button>Открыть</button></a>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='magisk.html'">
-                    <div class="form-back-container">
-                        <h2>Модули Magisk</h2>
-                        <p>Полезные модули для Magisk, которые могут упростить использование вашего телефона (И они могут что-то изменить)</p>
-                        <p>Программы не содержат в себе вирусов! Источники официальные!</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="magisk.html"><button style="width: 100%;">Открыть</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='android.html'">
+                <div class="inactive-container">
+                    <h2>Программы для Android</h2>
+                    <p>Хранит в себе Программы для Android</p>
+                    <p>Программы не содержат в себе вирусов! Источники официальные!</p>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='themes.html'">
-                    <div class="form-back-container">
-                        <h2>Кастомизация</h2>
-                        <p>Темы, обои, музыка и так далее можно найти здесь</p>
-                        <p>Загляни, может найдёшь новый, красивые обои</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="themes.html"><button style="width: 100%;">Открыть</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="android.html"><button>Открыть</button></a>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='keys.html'">
-                    <div class="form-back-container">
-                        <h2>Ключи активации</h2>
-                        <p>Ключи активации различных версий Windows</p>
-                        <p>Также содержит инструкцию для активации без активаторов и тому прочей ерунды</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="keys.html"><button style="width: 100%;">Открыть</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='magisk.html'">
+                <div class="inactive-container">
+                    <h2>Модули для Magisk</h2>
+                    <p>Полезные модули для Magisk, которые могут упростить использование вашего телефона (И они могут что-то изменить)</p>
+                    <p>Программы не содержат в себе вирусов! Источники официальные!</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="magisk.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="container-with-link">
+                <div class="inactive-container" onclick="document.location='linux.html'">
+                    <h2>Программы для дистрибутивов Linux</h2>
+                    <h4>Содержит в себе полезные (по моему мнению) программы для дистрибутивов на базе ядра Linux</h4>
+                    <h4>Программы не содержат в себе вирусов! Источники официальные!</h4>
+                </div>
+                <div class="inactive-continer">
+                    <a href="linux.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='themes.html'">
+                <div class="inactive-container">
+                    <h2>Кастомизация</h2>
+                    <p>Темы, обои, музыка и так далее можно найти здесь</p>
+                    <p>Загляни, может найдёшь новый, красивые обои</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="themes.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='keys.html'">
+                <div class="inactive-container">
+                    <h2>Ключи активации для Windows</h2>
+                    <p>Ключи активации различных версий Windows</p>
+                    <p>Также содержит инструкцию для активации без активаторов и тому прочей ерунды</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="keys.html"><button>Открыть</button></a>
                 </div>
             </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer_ru.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/WT.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

@@ -14,204 +14,392 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Скопировано!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
-    <title>О проекте</title>
+    <title>Информация</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../about.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='../about.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">О проекте</div>
+        <div class="page-name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button><span id="name">Информация</span></div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded active">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>О проекте и о создателе</h1>
-        <div class="container">
-            <div class="pillars">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>О создателе</h2>
-                        <p>Имя: Гаджи (На английском не читается)</p>
-                        <p>Возраст: 15 лет</p>
-                        <p>Псевдоним: OST - OS Tester (Windows Tester)</p>
-                        <p>Сайт написал в программе Visual Studio Code</p>
-                        <p>Помогали: <a href="https://nerok-web.github.io" class="link">Nerok</a> и <a href="https://mayplanet.ml" class="link">Maydilsiel</a></p>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Мой ПК</h2>
-                        <p>CPU: Intel Core 2 QUAD (2.40 GHz)</p>
-                        <p>GPU: NVIDIA GeForce 9500 GT (1 GB)</p>
-                        <p>RAM: 4 GB DDR3</p>
-                        <p>Материнская плата: G41MT-S2PT</p>
-                        <p>ОС: Windows 11 (ReviOS)</p>
-                    </div>
-                </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Инструменты для тестов</h2>
-                        <p>Виртуальная машина: VMware Workstation 12</p>
-                        <p>Программа для монтажа: Wondershare Filmora 11</p>
-                        <p>Программа для записи: Bandicam</p>
-                    </div>
+        <h1 id="page-title">Информация</h1>
+        <div class="pillars">
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Основная информация</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Имя</td><td class="table-form-right-top">Гаджи</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Возраст</td><td class="table-form">15 лет</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Псевдоним</td><td class="table-form">OST - Operating System Tester</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Расположение</td><td class="table-form">Россия, Дагестан</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">День рождения</td><td class="table-form">16 сентября 2007 года</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Часовой пояс</td><td class="table-form-right-bottom">UTC+3 (Москва)</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <h1>Мои устройства:</h1>
-            <div class="pillars-other">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Galaxy A53 5G (SM-A536E)</h2>
-                        <h4>CPU: Exynos 1280 (2400 МГц)</h4>
-                        <h4>GPU: Mali-G68</h4>
-                        <h4>Дисплей: 1080 * 2400 (6,46 дюймов) - 120 Гц</h4>
-                        <h4>Хранилище: 256 ГБ </h4>
-                        <h4>RAM: 8 ГБ LPDDR4X</h4>
-                        <h4>Батарея: 5000 мАч</h4>
-                        <h4>Состояние: <span style="color: var(--back-green-a1-100)">Официальный</span></h4>
-                    </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Мой компьютер</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Процессор</td><td class="table-form-right-top">Intel Core 2 QUAD (2.40 ГГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Графическое устройство</td><td class="table-form">NVIDIA GeForce 9500 GT (1 ГБ)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оперативная память</td><td class="table-form">4 ГБ DDR3</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Хранилище</th>
+                            <td class="table-form">HDD 160 ГБ (Системый)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">HDD 1 ТБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Материнская плата</td><td class="table-form-right-bottom">G41MT-S2PT</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Redmi Note 5 (whyred)</h2>
-                        <h4>CPU: Qualcomm Snapdragon 636 (1800 МГц)</h4>
-                        <h4>GPU: Adreno 509</h4>
-                        <h4>Дисплей: 1080 * 2160 (5.49 дюймов) - 60 Гц</h4>
-                        <h4>Хранилище: 64 ГБ</h4>
-                        <h4>RAM: 4 ГБ LPDDR4X</h4>
-                        <h4>Батарея: 4000 мАч</h4>
-                        <h4>Состояние:  <span style="color: var(--back-red-a1-100)">Кастом</span></h4>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Оборудование для тестов</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Виртуальная машина</td><td class="table-form-right-top">VMware Workstation 12</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Видеоредактор</td><td class="table-form">Wondershare Filmora 11</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Запись экрана</td><td class="table-form">Bandicam</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Превью</td><td class="table-form-right-bottom">Paint.net</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Galaxy J2 2018 (SM-J250F)</h2>
-                        <h4>CPU: Qualcomm Snapdragon 425 (1400 МГц)</h4>
-                        <h4>GPU: Adreno 308</h4>
-                        <h4>Dislpay: 960 * 540 (5 дюймов) - 60 Гц</h4>
-                        <h4>Хранилище: 16 GB</h4>
-                        <h4>RAM: 1.5 ГБ</h4>
-                        <h4>Батарея: 2600 мАч</h4>
-                        <h4>Состояние: <span style="color: var(--back-red-a1-100)">Кастом</span></h4>
-                    </div>
+            </div>
+        </div>
+        <h1>Мои устройства</h1>
+        <center>
+            <div class="immutable-pillars">
+                <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">Основное устройство</div>
+                <div class="container">В наличии</div>
+                <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">Нет в наличии</div>
+            </div>
+        </center>
+        <div class="separator"></div>
+        <div class="pillars-other">
+            <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">
+                <div class="inactive-container">
+                    <h2  style="color: var(--back-green-a1-200);">Galaxy A53 5G (SM-A536E)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top" style="background-color: var(--back-green-a1-800);">Процессор</td><td class="table-form-right-top" style="background-color: var(--back-green-a1-800);">Exynos 1280 (2400 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Графическое устройство</td><td class="table-form" style="background-color: var(--back-green-a1-800);">Mali-G68</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Экран</td><td class="table-form" style="background-color: var(--back-green-a1-800);">1080 * 2400 (6,46 дюймов) - 120 Гц</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Хранилище</td><td class="table-form" style="background-color: var(--back-green-a1-800);">256 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Оперативная память</td><td class="table-form" style="background-color: var(--back-green-a1-800);">8 ГБ LPDDR4X</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Аккумулятор</td><td class="table-form" style="background-color: var(--back-green-a1-800);">5000 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form" style="background-color: var(--back-green-a1-800);">Камера
+                                <td class="table-form" style="background-color: var(--back-green-a1-800);">Задняя: 64 МП + 12 МП + 5 МП + 5 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Фронтальная: 32 МП</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-green-a1-800);">Оболочка</td><td class="table-form" style="background-color: var(--back-green-a1-800);">One UI 5.1 (Android 13)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom" style="background-color: var(--back-green-a1-800);">Состояние</td><td class="table-form-right-bottom" style="background-color: var(--back-green-a1-800);"><span style="color: var(--back-red-a1-50)">Неофициальный</span></td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Nokia 5530 XpressMusic</h2>
-                        <h4>CPU: Freescale MXC300-30 (1 МГц)</h4>
-                        <h4>GPU: Не нашёл...</h4>
-                        <h4>Дисплей: 640 * 360 (2.9 дюймов)</h4>
-                        <h4>Хранилище: 256 МБ</h4>
-                        <h4>RAM: 128 МБ</h4>
-                        <h4>Батарея: 1000 мАч</h4>
-                        <h4>Состояние: <span style="color: var(--back-green-a1-100)">Официальный</span></h4>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Redmi Note 5 (whyred)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Процессор</td><td class="table-form-right-top">Snapdragon 636 (1800 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Графическое устройство</td><td class="table-form">Adreno 509</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Экран</td><td class="table-form">1080 * 2160 (5.49 дюймов) - 60 Гц</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Хранилище</td><td class="table-form">64 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оперативная память</td><td class="table-form">4 ГБ LPDDR4X</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Аккумулятор</td><td class="table-form">4000 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Камера
+                                <td class="table-form">Задняя: 12 МП + 5 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Фронтальная: 13 МП</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оболочка</td><td class="table-form">Pixel Experience (Android 13)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Состояние</td><td class="table-form-right-bottom"><span style="color: var(--back-red-a1-100)">Неофициальный</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-red-a1-200);">Galaxy J2 2018 (SM-J250F)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top" style="background-color: var(--back-red-a1-800);">Процессор</td><td class="table-form-right-top" style="background-color: var(--back-red-a1-800);">Snapdragon 425 (1400 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Графическое устройство</td><td class="table-form" style="background-color: var(--back-red-a1-800);">Adreno 308</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Экран</td><td class="table-form" style="background-color: var(--back-red-a1-800);">960 * 540 (5 дюймов) - 60 ГЦ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Хранилище</td><td class="table-form" style="background-color: var(--back-red-a1-800);">16 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Оперативная память</td><td class="table-form" style="background-color: var(--back-red-a1-800);">1.5 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Аккумулятор</td><td class="table-form" style="background-color: var(--back-red-a1-800);">2600 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form" style="background-color: var(--back-red-a1-800);">Камера
+                                <td class="table-form" style="background-color: var(--back-red-a1-800);">Задняя: 8 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Фронтальная: 5 МП</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form" style="background-color: var(--back-red-a1-800);">Оболочка</td><td class="table-form" style="background-color: var(--back-red-a1-800);">SE 8.5 (Android 7)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom" style="background-color: var(--back-red-a1-800);">Состояние</td><td class="table-form-right-bottom" style="background-color: var(--back-red-a1-800);"><span style="color: var(--back-red-a1-50)">Неофициальный</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Nokia 5530 XpressMusic</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Процессор</td><td class="table-form-right-top">Freescale MXC300-30 (1 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Графическое устройство</td><td class="table-form">Не нашёл информации...</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Экран</td><td class="table-form">640 * 360 (2.9 дюймов)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Хранилище</td><td class="table-form">256 МБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оперативная память</td><td class="table-form">128 МБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Аккумулятор</td><td class="table-form">1000 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Камера
+                                <td class="table-form">Задняя: 3.2 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Фронтальная: Нет в данной модели</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оболочка</td><td class="table-form">S60 Touch 5.0</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Состояние</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Официальный</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Galaxy Ace (GT-S5830i)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Процессор</td><td class="table-form-right-top">MSM7227T (800 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Графическое устройство</td><td class="table-form">Adreno 200</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Экран</td><td class="table-form">320 * 480 (3.5 дюймов)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Хранилище</td><td class="table-form">512 МБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оперативная память</td><td class="table-form">278 МБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Аккумулятор</td><td class="table-form">1350 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Камера
+                                <td class="table-form">Задняя: 5 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Фронтальная: Нет в данной модели</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оболочка</td><td class="table-form">Android 2.3.6</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Состояние</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Официальный</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Galaxy Tab 10.1 (GT-P7510)</h2>
+                    <table>
+                        <tr>
+                            <td class="table-form-left-top">Процессор</td><td class="table-form-right-top">NVIDIA Tegra 2 T20 (1000 МГц)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Графическое устройство</td><td class="table-form">NVIDIA ULP GeForce GPU</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Экран</td><td class="table-form">800 * 1200 (10.1 дюймов)</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Хранилище</td><td class="table-form">16 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оперативная память</td><td class="table-form">1 ГБ</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Аккумулятор</td><td class="table-form">7000 мАч</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-form">Камера
+                                <td class="table-form">Задняя: 3.2 МП</td>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Фронтальная: 2 МП</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form">Оболочка</td><td class="table-form">Android 4</td>
+                        </tr>
+                        <tr>
+                            <td class="table-form-left-bottom">Состояние</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Официальный</span></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
-        <div class="container">
-            <div class="pillars" style="padding: 0;">
-                <div class="form-back-with-link" onclick="document.location='https://t.me/wt_news5566'">
-                    <div class="form-back-container">
-                        <h2><i class="fa fa-telegram"></i> Telegram</h2>
-                        <h4>Основной источник новостей, где хранятся новости канала YouTube, обновления веб-сайта и многое другое.</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://t.me/wt_news5566"><button>Присоединяйся</button></a>
-                    </div>
+        <div class="pillars" style="padding: 0;">
+            <div class="container-with-link" onclick="document.location='https://t.me/ost_news5566'">
+                <div class="inactive-container">
+                    <h2><i class="fa fa-telegram"></i> Telegram</h2>
+                    <h4>Основной источник новостей о канале, о изменении на сайте, а также канал для обсуждения, оповещения и тому подобное</h4>
                 </div>
-                <div class="form-back-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
-                        <h4>Источник для размещения новых видео! Подпишись :D</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Подписаться</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://t.me/ost_news5566"><button>Вступить</button></a>
                 </div>
-                <div class="form-back-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-50);" onclick="document.location='https://github.com/wt-sys'">
-                    <div class="form-back-container">
-                        <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
-                        <h4>Источник хостинга моего сайта! (Да, мой сайт с открытым исходным кодом, вы можете проверить это сами!)</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/ost-sys"><button class="github-button">Просмотреть</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
+                    <h4>Источник публикации новых видео! Встречаются как опыты с Windows, так и просто полезные видео! Подпишись, Вам не сложно, а мне приятно!</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Подписаться</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);" onclick="document.location='https://github.com/wt-sys'">
+                <div class="inactive-container">
+                    <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
+                    <h4>Источник расположения данного сайта! Код является открытым, любой может спокойно взять и изучить его!</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/ost-sys"><button class="github-button">Просмотреть</button></a>
                 </div>
             </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer_ru.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

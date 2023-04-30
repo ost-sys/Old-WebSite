@@ -14,148 +14,102 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        function myFunction() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        document.execCommand("copy");
-        alert("Скопировано!");
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
-    <title>Модули Magisk</title>
+    <title>Модули для Magisk</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../magisk.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <a class="switch" onclick="document.location='../magisk.html'" id="lang"><span class="material-symbols-rounded">public</span></a>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Модули Magisk</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button> Модули для Magisk</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>Модули Magisk</h1>            
+        <h1 id="page-title">Модули для Magisk</h1>            
         <h3>Здесь собраны полезные модули для Magisk! Посмотри, может найдёшь что-нибудь полезное!</h3>
-        <div class="container">
-            <div class="pillars-other">
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Magisk Manager</h2>
-                        <h4>Приложение APK/ZIP для установки и управления ROOT правами. Устанавливается в специальном модифицированной версии Recovery (<a class="link" href="https://twrp.me/">TWRP</a> или <a class="link" href="https://orangefox.download/">Orange Fox Recovery Project</a>)</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/topjohnwu/Magisk"><button>GitHub</button></a>
-                    </div>
+        <div class="pillars-other">
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Magisk Manager</h2>
+                    <h4>Приложение APK/ZIP для установки и управления ROOT правами. Устанавливается в специальном модифицированной версии Recovery (<a class="link" href="https://twrp.me/">TWRP</a> или <a class="link" href="https://orangefox.download/">Orange Fox Recovery Project</a>)</h4>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Magisk Manager (MD3)</h2>
-                        <h4>Менеджер Magisk с новым дизайном Android (Material You)</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/datnerdguy/Magisk-Monet"><button>GitHub</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/topjohnwu/Magisk"><button>GitHub</button></a>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Pixelify</h2>
-                        <h4>Включение всех возможных фишек с телефонов Google Pixel<br>Требования:<br>1. Версия Android: от Android 7.0 до Android 13<br>2. Устройство Arm64<br>3. Наличие клавиш регулировки громкости<br>4. Интернет для ресурсов NGA, живые обои Pixel, службы персонализации устройств и средство запуска Pixel<br>5. Zygisk или Riru (рекомендуется, но не является обязательным)</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/Kingsman44/Pixelify"><button>GitHub</button></a>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Magisk Manager (MD3)</h2>
+                    <h4>Менеджер Magisk с новым дизайном Android (Material You)</h4>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Universal Safety Fix</h2>
-                        <h4>Модуль Magisk для обхода аттестации Google SafetyNet.</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/kdrag0n/safetynet-fix"><button>GitHub</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/datnerdguy/Magisk-Monet"><button>GitHub</button></a>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Блокировщик рекламы</h2>
-                        <h4>Модуль Magisk для блокировки рекламы в приложениях и в интернете. Не работает в приложении YouTube</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://github.com/pantsufan/Magisk-Ad-Blocking-Module"><button>GitHub</button></a>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Pixelify</h2>
+                    <h4>Включение всех возможных фишек с телефонов Google Pixel (Наличие Zygisk требуется, но не является обязательным)</h4>
                 </div>
-                <div class="form-back">
-                    <div class="form-back-container">
-                        <h2>Better QS</h2>
-                        <h4>Этот модуль будет вносить изменения в QS, когда вы используете свое устройство в ландшафтном режиме. Этот новый QS будет лучше, чем когда-либо, так как вы сможете читать и получать уведомления с правой стороны. С левой стороны у вас будут переключатели QS (только для Android 13–14).</h4>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://index.teamfiles.workers.dev/0:/Better QS/"><button>Download</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/Kingsman44/Pixelify"><button>GitHub</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Universal Safety Fix</h2>
+                    <h4>Модуль Magisk для обхода аттестации Google SafetyNet.</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/kdrag0n/safetynet-fix"><button>GitHub</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Блокировщик рекламы</h2>
+                    <h4>Модуль Magisk для блокировки рекламы в приложениях и в интернете. Не работает в приложении YouTube</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://github.com/pantsufan/Magisk-Ad-Blocking-Module"><button>GitHub</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inactive-container">
+                    <h2>Better QS</h2>
+                    <h4>Этот модуль будет вносить изменения в QS, когда вы используете свое устройство в ландшафтном режиме. Этот новый QS будет лучше, чем когда-либо, так как вы сможете читать и получать уведомления с правой стороны. С левой стороны у вас будут переключатели QS (только для Android 13–14).</h4>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://index.teamfiles.workers.dev/0:/Better QS/"><button>Download</button></a>
                 </div>
             </div>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer_ru.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

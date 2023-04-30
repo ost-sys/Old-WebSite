@@ -14,119 +14,86 @@
     <style>
         @import url('https://fonts.cdnfonts.com/css/google-sans');
     </style>
-    <script>  
-        setInterval(function () {
-            var now = new Date();
-            var clock = document.getElementById("clock");
-            clock.innerHTML = now.toLocaleTimeString();
-        }, 1000);
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("back").style.bottom = "16px";
-        } else {
-            document.getElementById("back").style.bottom = "-70px";
-        }
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("lang").style.bottom = "16px";
-        } else {
-            document.getElementById("lang").style.bottom = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script>
     <title>Мои друзья</title>
 </head>
-<body>
-    <a class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></a>
-    <a class="switch" href="../friends.html" id="lang"><span class="material-symbols-rounded">public</span></a>
+<body class="body_hide">
+    <button class="switch" onclick="document.location='../friends.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
     <nav class="navbar" id="navbar">
-        <div class="page-name">Мои друзья</div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button> Мои друзья</div>
         <div class="navbar__wrap">
             <div class="hamb">
                 <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
             <ul class="menu" id="menu">
                 <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
                 <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">computer<span class="navigation-list-name">Софт</span></a></li>
-                <li><a href="about.html" title="О проекте" class="material-symbols-rounded">account_circle<span class="navigation-list-name">О проекте</span></a></li>
+                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
                 <li><a href="socials.html" title="Мои друзья" class="material-symbols-rounded active">group<span class="navigation-list-name">Друзья</span></a></li>
+                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
             </ul>
         </div>
     </nav>
     <div class="popup" id="popup"></div>
-    <script src="../assets/js/nav.js"></script>
     <main>
-        <h1>Мои друзья!</h1>
+        <h1 id="page-title">Мои друзья!</h1>
         <h3>Здесь можно увидеть моих друзей! Встречайте:</h3>
-        <div class="container">
-            <div class="pillars">
-                <div class="form-back-with-link" onclick="document.location='https://nerok.ml'">
-                    <div class="form-back-container">
-                        <h2>Nerok</h2>
-                        <p>Обо мне: Я Nerok (Данил), Создатель <a href="https://nerok.ml" class="link">Nerok.ml</a> и автор канала <a href="https://www.youtube.com/@Nerokk" class="link">Nerok</a>. Люблю эксперементы над виндой, и над всем - что можно ;)</p>
-                        <p>Цитата: Ты должен быть готов к тому, что можешь быть неправ.</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://nerok.ml"><button style="width: 100%">Сайт</button></a>
-                    </div>
+        <div class="pillars">
+            <div class="container-with-link" onclick="document.location='https://nerok.ml'">
+                <div class="inactive-container">
+                    <h2>Nerok</h2>
+                    <p>Обо мне: Я Nerok (Данил), Создатель <a href="https://nerok.ml" class="link">Nerok.ml</a> и автор канала <a href="https://www.youtube.com/@Nerokk" class="link">Nerok</a>. Люблю эксперементы над виндой, и над всем - что можно ;)</p>
+                    <p>Цитата: Ты должен быть готов к тому, что можешь быть неправ.</p>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='https://ertorworld.ru'">
-                    <div class="form-back-container">
-                        <h2>The Ertor</h2>
-                        <p>Обо мне: <a href="https://ertorworld.ru/about.html" class="link">Здесь</a></p>
-                        <p>Цитата: Если выпили хорошо значит утром плохо, если выпил плохо значит утром Bruh</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://ertorworld.ru"><button style="width: 100%">Сайт</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://nerok.ml"><button>Сайт</button></a>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='https://mayplanet.ml'">
-                    <div class="form-back-container">
-                        <h2>Maydilsiel</h2>
-                        <p>Обо мне: Я начинающий программист на C# и разрабатываю свои собственные проекты на этом языке. Кроме того, я создал свой собственный веб-сайт <a href="https://mayplanet.ml'">mayplanet.ml</a>, который показывает мои навыки и проекты. В настоящее время я учусь на программиста в колледже и стремлюсь к развитию своих навыков и знаний в области программирования. </p>
-                        <p>Цитата: В программировании нет ничего более волнительного, чем проблема, которую ты никак не можешь решить, пока не находишь правильное решение.</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://mayplanet.ml"><button style="width: 100%">Сайт</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://ertorworld.ru'">
+                <div class="inactive-container">
+                    <h2>The Ertor</h2>
+                    <p>Обо мне: <a href="https://ertorworld.ru/about.html" class="link">Здесь</a></p>
+                    <p>Цитата: Если выпили хорошо значит утром плохо, если выпил плохо значит утром :Bruh:</p>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='https://www.youtube.com/channel/UCnsIKqe2F0sfa_ezfidB5Fg'">
-                    <div class="form-back-container">
-                        <h2>Daniel Myslivets</h2>
-                        <p>Обо мне: Абсолютно обычный человек</p>
-                        <p>Время интересных фактов: вентилятор нужен для того, чтобы вызвать комаров чеpез диcковод</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://www.youtube.com/channel/UCnsIKqe2F0sfa_ezfidB5Fg"><button>YouTube</button></a>
-                    </div>
+                <div class="inactive-container">
+                    <a href="https://ertorworld.ru"><button>Сайт</button></a>
                 </div>
-                <div class="form-back-with-link" onclick="document.location='https://tinelix.ru'">
-                    <div class="form-back-container">
-                        <h2>Tinelix</h2>
-                        <p>Обо мне: Меня зовут Дмитрий, мне 19 лет. Работаю на <a href="https://www.youtube.com/channel/UCSPjn_Y0pLdPy6Ncb9NAdww" class="link">YouTube</a> на протяжении шести лет в развлекательно-технологическом направлении. Кроме этого я также путешествую по временам компьютеризации 90-х и 2000-х, занимаюсь программированием на различных языках с 2018 года.</p>
-                    </div>
-                    <div class="form-back-container">
-                        <a href="https://tinelix.ru"><button>Website</button></a>
-                    </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://mayplanet.ml'">
+                <div class="inactive-container">
+                    <h2>Maydilsiel</h2>
+                    <p>Обо мне: Я начинающий программист на C# и разрабатываю свои собственные проекты на этом языке. Кроме того, я создал свой собственный веб-сайт <a href="https://mayplanet.ml'">mayplanet.ml</a>, который показывает мои навыки и проекты. В настоящее время я учусь на программиста в колледже и стремлюсь к развитию своих навыков и знаний в области программирования. </p>
+                    <p>Цитата: В программировании нет ничего более волнительного, чем проблема, которую ты никак не можешь решить, пока не находишь правильное решение.</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://mayplanet.ml"><button>Сайт</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://www.youtube.com/channel/UCnsIKqe2F0sfa_ezfidB5Fg'">
+                <div class="inactive-container">
+                    <h2>Daniel Myslivets</h2>
+                    <p>Обо мне: Абсолютно обычный человек</p>
+                    <p>Время интересных фактов: вентилятор нужен для того, чтобы вызвать комаров чеpез диcковод</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://www.youtube.com/channel/UCnsIKqe2F0sfa_ezfidB5Fg"><button>YouTube</button></a>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://tinelix.ru'">
+                <div class="inactive-container">
+                    <h2>Tinelix</h2>
+                    <p>Обо мне: Меня зовут Дмитрий, мне 19 лет. Работаю на <a href="https://www.youtube.com/channel/UCSPjn_Y0pLdPy6Ncb9NAdww" class="link">YouTube</a> на протяжении шести лет в развлекательно-технологическом направлении. Кроме этого я также путешествую по временам компьютеризации 90-х и 2000-х, занимаюсь программированием на различных языках с 2018 года.</p>
+                </div>
+                <div class="inactive-container">
+                    <a href="https://tinelix.ru"><button>Website</button></a>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
         <div class="friends">
-            <h3 style="font-size: 20px;">Мои друзья:</h3>
+            <h2>Мои друзья:</h2>
             <a href="https://nerok.ml">
                 <img src="../assets/image/nerok_banner.png" class="friends-link" alt="Nerok"/>
             </a>
@@ -145,24 +112,19 @@
             <h4 style="padding: 0px;">Хочешь быть здесь, пиши в ЛС <a href="https://t.me/Windows_Tester" class="link">Telegram</a></h4>
         </div>
     </main>
-</body>
-<footer>
-    <div class="footer-section-info">
-        <script src="../assets/js/year.js"></script><br><br>
-        Текущее время: <span id="clock" class="time"></span><br><br>
-        Время до моего дня рождения: <span id="demo" class="time"></span><br><br>
-        <script src="../assets/js/timer.js"></script>
-        <script src="../assets/js/os.js"></script>
-    </div>
-    <div class="footer-section-link">
-        <h3>Ссылка на сайт</h3>
-        <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
-        <br>
-        <div class="button-footer-pillars">
-            <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
-            <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+    <footer>
+        <div class="footer-section-info">
+            <script src="../assets/js/all_in_one_ru.js"></script>
         </div>
-    </div>
-</footer>
-    <script src="../assets/js/button.js"></script>
+        <div class="footer-section-link">
+            <h3>Ссылка на сайт</h3>
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <br>
+            <div class="button-footer-pillars">
+                <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 
+                <a href="../assets/image/ost.png"><button class="button-footer">Скачать картинку банера</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
