@@ -618,6 +618,7 @@ td, th {
     footer {
         padding: 0;
         font-size: 10px;
+        margin-bottom: 80px
     }
     .form-back-with-link {
         border-radius: 10px;
