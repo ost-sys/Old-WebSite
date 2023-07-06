@@ -77,14 +77,20 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("name").style.color = "var(--back-blue-color-a1-50)";
-    document.getElementById("navbar").style.backgroundColor = "var(--back-blue-color-n1-800)";
+    document.getElementById("navbar").style.backgroundColor = "var(--back-blue-color-n1-900)";
     document.getElementById("navbar").style.boxShadow = "0 5px 5px #00000050";
     document.getElementById("page-title").style.color = "transparent";
+    document.getElementById("name-mobile").style.color = "var(--back-blue-color-a1-50)"
+    document.getElementById("name-mobile").style.backgroundColor = "var(--back-blue-color-n1-900)"
+    document.getElementById("name-mobile").style.boxShadow = "0 5px 5px #00000050"
   } else {
     document.getElementById("name").style.color = "transparent";
     document.getElementById("navbar").style.backgroundColor = "#00000000";
     document.getElementById("navbar").style.boxShadow = "none";
     document.getElementById("page-title").style.color = "var(--back-blue-color-a1-200)";
+    document.getElementById("name-mobile").style.color = "#00000000"
+    document.getElementById("name-mobile").style.backgroundColor = "transparent"
+    document.getElementById("name-mobile").style.boxShadow = "none"
   }
 }
 
@@ -122,47 +128,68 @@ btns.forEach(el => {
 })
 
 // ============================================================= 
-// Navbar code
+// old Navbar code
 
-const hamb = document.querySelector("#hamb");
-const popup = document.querySelector("#popup");
-const body = document.body;
+// const hamb = document.querySelector("#hamb");
+// const popup = document.querySelector("#popup");
+// const body = document.body;
 
-// Клонируем меню, чтобы задать свои стили для мобильной версии
-const menu = document.querySelector("#menu").cloneNode(1);
+// // Клонируем меню, чтобы задать свои стили для мобильной версии
+// const menu = document.querySelector("#menu").cloneNode(1);
 
-// При клике на иконку hamb вызываем ф-ию hambHandler
-hamb.addEventListener("click", hambHandler);
+// // При клике на иконку hamb вызываем ф-ию hambHandler
+// hamb.addEventListener("click", hambHandler);
 
-// Выполняем действия при клике ..
-function hambHandler(e) {
-  e.preventDefault();
-  // Переключаем стили элементов при клике
-  popup.classList.toggle("open");
-  hamb.classList.toggle("active");
-  body.classList.toggle("noscroll");
-  renderPopup();
-}
+// // Выполняем действия при клике ..
+// function hambHandler(e) {
+//   e.preventDefault();
+//   // Переключаем стили элементов при клике
+//   popup.classList.toggle("open");
+//   hamb.classList.toggle("active");
+//   body.classList.toggle("noscroll");
+//   renderPopup();
+// }
 
-// Здесь мы рендерим элементы в наш попап
-function renderPopup() {
-  popup.appendChild(menu);
-}
+// // Здесь мы рендерим элементы в наш попап
+// function renderPopup() {
+//   popup.appendChild(menu);
+// }
 
-// Код для закрытия меню при нажатии на ссылку
-const links = Array.from(menu.children);
+// // Код для закрытия меню при нажатии на ссылку
+// const links = Array.from(menu.children);
 
-// Для каждого элемента меню при клике вызываем ф-ию
-links.forEach((link) => {
-  link.addEventListener("click", closeOnClick);
-});
+// // Для каждого элемента меню при клике вызываем ф-ию
+// links.forEach((link) => {
+//   link.addEventListener("click", closeOnClick);
+// });
 
-// Закрытие попапа при клике на меню
-function closeOnClick() {
-  popup.classList.remove("open");
-  hamb.classList.remove("active");
-  body.classList.remove("noscroll");
-}
+// // Закрытие попапа при клике на меню
+// function closeOnClick() {
+//   popup.classList.remove("open");
+//   hamb.classList.remove("active");
+//   body.classList.remove("noscroll");
+// }
+
+// HTML for this code:
+{/* <nav class="navbar" id="navbar">
+<div class="page-name" id="name">Home page</div>
+<div class="navbar__wrap">
+    <div class="hamb">
+        <div class="hamb__field" id="hamb">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+        </div>
+    </div>
+    <ul class="menu" id="menu">
+        <li><a href="index.html" title="Home page" class="material-symbols-rounded active">home<span class="navigation-list-name">Home</span></a></li>
+        <li><a href="changelog.html" title="There are innovations here!" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Changelog</span></a></li>
+        <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
+        <li><a href="friends.html" title="My friends" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
+        <li><a href="about.html" title="About project" class="material-symbols-rounded">account_circle<span class="navigation-list-name">About</span></a></li>
+    </ul>
+</div>
+</nav>
+<div class="popup" id="popup"> */}
 
 // ============================================================= 
 // Smooth

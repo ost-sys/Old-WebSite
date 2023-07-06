@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
@@ -18,25 +18,26 @@
 </head>
 <body class="body_hide">
     <button class="switch" onclick="document.location='ru/about.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
+    <div class="page-name-mobile" id="name-mobile"><button class="back-button-mobile" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Information<button class="switch-mobile" onclick="document.location='ru/about.html'" id="lang"><span class="material-symbols-rounded">public</span></button></div>
     <nav class="navbar" id="navbar">
         <div class="page-name" id="name"><button class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Information</div>
-        <div class="navbar__wrap">
-            <div class="hamb">
-                <div class="hamb__field" id="hamb">
-                <span class="bar"></span> <span class="bar"></span>
-                <span class="bar"></span>
-                </div>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="index.html" title="Home page" class="material-symbols-rounded">home<span class="navigation-list-name">Home</span></a></li>
-                <li><a href="changelog.html" title="There are innovations here!" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Changelog</span></a></li>
-                <li><a href="soft.html" title="Programs and more" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
-                <li><a href="friends.html" title="My friends" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
-                <li><a href="about.html" title="About project" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">About</span></a></li>
-            </ul>
-        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Home</span></a></li>
+            <li><a href="changelog.html" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Changelog</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">About</span></a></li>
+        </ul>
     </nav>
-    <div class="popup" id="popup"></div>
+    <nav class="navbar-mobile">
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Home</span></a></li>
+            <li><a href="changelog.html" title="There are innovations here!" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Changelog</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded">folder<span class="navigation-list-name">Utilities</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Friends</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">About</span></a></li>
+        </ul>
+    </nav>
     <main>
         <h1 id="page-title">Information</h1>
         <div class="pillars">
@@ -114,14 +115,14 @@
         <h1>My devices</h1>
         <center>
             <div class="immutable-pillars">
-                <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">Main device</div>
+                <div class="container" style="background-color: var(--back-green-a1-900); color: var(--back-green-a1-100);">Main device</div>
                 <div class="container">In stock</div>
-                <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">Out of stock</div>
+                <div class="container" style="background-color: var(--back-red-a1-900); color: var(--back-red-a1-100);">Out of stock</div>
             </div>
         </center>
         <div class="separator"></div>
         <div class="pillars-other">
-            <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">
+            <div class="container" style="background-color: var(--back-green-a1-900); color: var(--back-green-a1-100);">
                 <div class="inactive-container">
                     <h2  style="color: var(--back-green-a1-200);">Galaxy A53 5G (SM-A536E)</h2>
                     <table>
@@ -199,7 +200,7 @@
                     </table>
                 </div>
             </div>
-            <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">
+            <div class="container" style="background-color: var(--back-red-a1-900); color: var(--back-red-a1-100);">
                 <div class="inactive-container">
                     <h2 style="color: var(--back-red-a1-200);">Galaxy J2 2018 (SM-J250F)</h2>
                     <table>
@@ -272,7 +273,7 @@
                             <td class="table-form">UI</td><td class="table-form">S60 Touch 5.0</td>
                         </tr>
                         <tr>
-                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Official</span></td>
                         </tr>
                     </table>
                 </div>
@@ -311,7 +312,7 @@
                             <td class="table-form">UI</td><td class="table-form">Android 2.3.6</td>
                         </tr>
                         <tr>
-                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Official</span></td>
                         </tr>
                     </table>
                 </div>
@@ -350,39 +351,37 @@
                             <td class="table-form">UI</td><td class="table-form">Android 4</td>
                         </tr>
                         <tr>
-                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Unofficial</span></td>
+                            <td class="table-form-left-bottom">Status</td><td class="table-form-right-bottom"><span style="color: var(--back-green-a1-100)">Official</span></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
         <div class="separator"></div>
-        <div class="pillars" style="padding: 0;">
+        <div class="pillars-info" style="padding: 0;">
             <div class="container-with-link" onclick="document.location='https://t.me/ost_news5566'">
                 <div class="inactive-container">
-                    <h2><i class="fa fa-telegram"></i> Telegram</h2>
-                    <h4>The main news source for YouTube channel news, website updates, and more.</h4>
-                </div>
-                <div class="inactive-container">
-                    <a href="https://t.me/ost_news5566"><button>Join</button></a>
+                    <h2><i class="fab fa-telegram"></i></h2>
                 </div>
             </div>
-            <div class="container-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
+            <div class="container-with-link youtube" style="background-color: var(--back-red-a1-900)" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
                 <div class="inactive-container">
-                    <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
-                    <h4>Source for posting new videos! Subscribe :D</h4>
-                </div>
-                <div class="inactive-container">
-                    <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Subscribe</button></a>
+                    <h2 style="color: var(--back-red-a1-200);"><i class="fab fa-youtube"></i></h2>
                 </div>
             </div>
-            <div class="container-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);" onclick="document.location='https://github.com/ost-sys'">
+            <div class="container-with-link" style="background-color: var(--back-blue-color-n1-900)" onclick="document.location='https://github.com/ost-sys'">
                 <div class="inactive-container">
-                    <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
-                    <h4>Source hosting my site! (Yes, my site is open source, you can check it out for yourself!)</h4>
+                    <h2 style="color: var(--back-blue-color-n1-200);"><i class="fab fa-github"></i></h2>
                 </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://m.vk.com/OST5566'">
                 <div class="inactive-container">
-                    <a href="https://github.com/ost-sys"><button class="github-button">Check it</button></a>
+                    <h2><i class="fab fa-vk"></i></h2>
+                </div>
+            </div>
+            <div class="container-with-link" onclick="document.location='https://openvk.uk/id11578'">
+                <div class="inactive-container">
+                    <h2>OpenVK</h2>
                 </div>
             </div>
         </div>
@@ -393,7 +392,7 @@
         </div>
         <div class="footer-section-link">
             <h3>Link to my website</h3>
-            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/image/ost.png" alt="OST"/></a>' id="myInput">
             <br>
             <div class="button-footer-pillars">
                 <button class="button-footer" onclick="myFunction()">Copy text</button> 

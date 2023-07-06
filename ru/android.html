@@ -18,25 +18,26 @@
 </head>
 <body class="body_hide">
     <button class="switch" onclick="document.location='../android.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
+    <div class="page-name-mobile" id="name-mobile"><button class="back-button-mobile" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Программы для Android<button class="switch-mobile" onclick="document.location='../android.html'" id="lang"><span class="material-symbols-rounded">public</span></button></div>
     <nav class="navbar" id="navbar">
-        <div class="page-name" id="name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button> Программы для Android</div>
-        <div class="navbar__wrap">
-            <div class="hamb">
-                <div class="hamb__field" id="hamb">
-                    <span class="bar"></span> <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<spa class="navigation-list-name">Главная</span></a></li>
-                <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
-                <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
-                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
-            </ul>
-        </div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Программы для Android</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
+            <li><a href="changelog.html" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
+        </ul>
     </nav>
-    <div class="popup" id="popup"></div>
+    <nav class="navbar-mobile">
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
+            <li><a href="changelog.html" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded active">folder_open<span class="navigation-list-name">Утилиты</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded">account_circle<span class="navigation-list-name">Инфо</span></a></li>
+        </ul>
+    </nav>
     <main>
         <h1 id="page-title">Программы для Android</h1>
         <h3>Здесь собраны программы для Android! Посмотри, может найдёшь что-нибудь полезное!</h3>
@@ -122,7 +123,7 @@
         </div>
         <div class="footer-section-link">
             <h3>Ссылка на сайт</h3>
-            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/image/ost.png" alt="OST"/></a>' id="myInput">
             <br>
             <div class="button-footer-pillars">
                 <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 

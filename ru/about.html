@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
@@ -18,25 +18,26 @@
 </head>
 <body class="body_hide">
     <button class="switch" onclick="document.location='../about.html'" id="lang"><span class="material-symbols-rounded">public</span></button>
+    <div class="page-name-mobile" id="name-mobile"><button class="back-button-mobile" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Информация<button class="switch-mobile" onclick="document.location='../about.html'" id="lang"><span class="material-symbols-rounded">public</span></button></div>
     <nav class="navbar" id="navbar">
-        <div class="page-name"><button class="back-button" onclick="history.back()"><span class="material-symbols-rounded">arrow_back</span></button><span id="name">Информация</span></div>
-        <div class="navbar__wrap">
-            <div class="hamb">
-                <div class="hamb__field" id="hamb">
-                    <span class="bar"></span> <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="index.html" title="Главная страница" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
-                <li><a href="changelog.html" title="Список изменений" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
-                <li><a href="soft.html" title="Программы и прочее" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
-                <li><a href="friends.html" title="Мои друзья" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
-                <li><a href="about.html" title="Информация о сайте, о авторе и т.д." class="material-symbols-rounded active">account_circle<span class="navigation-list-name">Инфо</span></a></li>
-            </ul>
-        </div>
+        <div class="page-name" id="name"><button class="back-button" onclick="history.back();" id="back"><span class="material-symbols-rounded">arrow_back</span></button>Информация</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
+            <li><a href="changelog.html" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">Инфо</span></a></li>
+        </ul>
     </nav>
-    <div class="popup" id="popup"></div>
+    <nav class="navbar-mobile">
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="material-symbols-rounded">home<span class="navigation-list-name">Главная</span></a></li>
+            <li><a href="changelog.html" class="material-symbols-rounded">edit_document<span class="navigation-list-name">Изменения</span></a></li>
+            <li><a href="soft.html" class="material-symbols-rounded">folder<span class="navigation-list-name">Утилиты</span></a></li>
+            <li><a href="friends.html" class="material-symbols-rounded">group<span class="navigation-list-name">Друзья</span></a></li>
+            <li><a href="about.html" class="material-symbols-rounded active">account_circle<span class="navigation-list-name">Инфо</span></a></li>
+        </ul>
+    </nav>
     <main>
         <h1 id="page-title">Информация</h1>
         <div class="pillars">
@@ -114,14 +115,14 @@
         <h1>Мои устройства</h1>
         <center>
             <div class="immutable-pillars">
-                <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">Основное устройство</div>
+                <div class="container" style="background-color: var(--back-green-a1-900); color: var(--back-green-a1-100);">Основное устройство</div>
                 <div class="container">В наличии</div>
-                <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">Нет в наличии</div>
+                <div class="container" style="background-color: var(--back-red-a1-900); color: var(--back-red-a1-100);">Нет в наличии</div>
             </div>
         </center>
         <div class="separator"></div>
         <div class="pillars-other">
-            <div class="container" style="background-color: var(--back-green-a1-700); color: var(--back-green-a1-100);">
+            <div class="container" style="background-color: var(--back-green-a1-900); color: var(--back-green-a1-100);">
                 <div class="inactive-container">
                     <h2  style="color: var(--back-green-a1-200);">Galaxy A53 5G (SM-A536E)</h2>
                     <table>
@@ -199,7 +200,7 @@
                     </table>
                 </div>
             </div>
-            <div class="container" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);">
+            <div class="container" style="background-color: var(--back-red-a1-900); color: var(--back-red-a1-100);">
                 <div class="inactive-container">
                     <h2 style="color: var(--back-red-a1-200);">Galaxy J2 2018 (SM-J250F)</h2>
                     <table>
@@ -357,32 +358,30 @@
             </div>
         </div>
         <div class="separator"></div>
-        <div class="pillars" style="padding: 0;">
+        <div class="pillars-info" style="padding: 0;">
             <div class="container-with-link" onclick="document.location='https://t.me/ost_news5566'">
                 <div class="inactive-container">
-                    <h2><i class="fa fa-telegram"></i> Telegram</h2>
-                    <h4>Основной источник новостей о канале, о изменении на сайте, а также канал для обсуждения, оповещения и тому подобное</h4>
-                </div>
-                <div class="inactive-container">
-                    <a href="https://t.me/ost_news5566"><button>Вступить</button></a>
+                    <h2><i class="fab fa-telegram"></i></h2>
                 </div>
             </div>
-            <div class="container-with-link" style="background-color: var(--back-red-a1-700); color: var(--back-red-a1-100);" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
+            <div class="container-with-link" style="background-color: var(--back-red-a1-900)" onclick="document.location='https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q'">
                 <div class="inactive-container">
-                    <h2 style="color: var(--back-red-a1-200);"><i class="fa fa-youtube-play"></i> YouTube</h2>
-                    <h4>Источник публикации новых видео! Встречаются как опыты с Windows, так и просто полезные видео! Подпишись, Вам не сложно, а мне приятно!</h4>
-                </div>
-                <div class="inactive-container">
-                    <a href="https://www.youtube.com/channel/UC6wNi6iQFVSnd-eJivuG3_Q"><button class="yt-button">Подписаться</button></a>
+                    <h2 style="color: var(--back-red-a1-200);"><i class="fab fa-youtube"></i></h2>
                 </div>
             </div>
-            <div class="container-with-link" style="background-color: var(--back-orange-color-n1-700); color: var(--back-orange-color-n1-100);" onclick="document.location='https://github.com/ost-sys'">
+            <div class="container-with-link" style="background-color: var(--back-blue-color-n1-900)" onclick="document.location='https://github.com/ost-sys'">
                 <div class="inactive-container">
-                    <h2 style="color: var(--back-orange-color-n1-200);"><i class="fa fa-github"></i> GitHub</h2>
-                    <h4>Источник расположения данного сайта! Код является открытым, любой может спокойно взять и изучить его!</h4>
+                    <h2 style="color: var(--back-blue-color-n1-200);"><i class="fab fa-github"></i></h2>
                 </div>
+            </div>
+            <div class="container-with-link">
                 <div class="inactive-container">
-                    <a href="https://github.com/ost-sys"><button class="github-button">Просмотреть</button></a>
+                    <h2><i class="fab fa-vk"></i></h2>
+                </div>
+            </div>
+            <div class="container-with-link">
+                <div class="inactive-container">
+                    <h2>OpenVK</h2>
                 </div>
             </div>
         </div>
@@ -393,7 +392,7 @@
         </div>
         <div class="footer-section-link">
             <h3>Ссылка на сайт</h3>
-            <input type="text" value='<a href="https://ost-sys.github.io"><img src="<location_of_the_banner>" alt="OST"/></a>' id="myInput">
+            <input type="text" value='<a href="https://ost-sys.github.io"><img src="https://ost-sys.github.io/assets/image/ost.png" alt="OST"/></a>' id="myInput">
             <br>
             <div class="button-footer-pillars">
                 <button class="button-footer" onclick="myFunction()">Скопировтаь текст</button> 

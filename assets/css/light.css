@@ -136,4 +136,15 @@
     --back-green-a1-700: #c2ce7c;
     --back-green-a1-800: #dee995;
     --back-green-a1-900: #edf9a4;
+    /*PURPLE*/
+    --back-purple-a1-50: #180F50;
+    --back-purple-a1-100: #2D2765;
+    --back-purple-a1-200: #453F7F;
+    --back-purple-a1-300: #5D5699;
+    --back-purple-a1-400: #746FB2;
+    --back-purple-a1-500: #8F88CE;
+    --back-purple-a1-600: #AAA2EB;
+    --back-purple-a1-700: #C8BFFE;
+    --back-purple-a1-800: #E5DEFF;
+    --back-purple-a1-900: #F5EEFE;
 }
